@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>navi</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .border {
+            border: 1px solid red;
+        }
+        .helloworld {
+            border-radius:5px;
+            border:5px solid silver;
+            display: inline-block;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <button id="test">Click Me!</button></div> -->
+    <!--alert 경고창   onclick="alert('clicking!');  로 버튼 id로 사용-->
+
+  
+        
+
+    <h1>이벤트의 위임</h1>
+    <p>아래 버튼을 눌러 링크를 추가하고, 링크를 클릭해 보세요!</p>
+    <ul>
+        <li><a href="/html/intro">HTML</a></li>
+        <li><a href="/css/intro">CSS</a></li>
+    </ul>
+    <button>리스트 아이템 추가</button>
+    <p id="text"></p>
+
+
+ 
+
+    <button type="button" onclick="helloWorld()">버튼을 연타해 보세요!!</button>
+
+    <div class="helloWorld"></div>
+  
+
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+
+  
+        // function helloWorld(){
+        //     $('button').addClass('border');
+        //  }
+
+
+         function helloWorld(){
+            $('.helloworld').toggleClass('border');
+         }
+        
+    </script>
+</body>
+</html>

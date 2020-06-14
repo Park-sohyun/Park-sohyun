@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    pdding: 0;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+
+/*
+.navi>li {
+    float: left;
+    margin: 20px 10px; 
+}
+
+.navi {
+    background-color: pink;
+    height: 80px;
+}
+/* float 속성때문에 height 값 강제로 넣어줌 */
+/*
+.subNav {
+    display: none;
+    background-color: skyblue;
+    position: absolute;
+}
+
+.subNav>li {
+    margin: 10px 0;
+    text-align: center;
+    float: left;
+}
+*/
+
+
+header {
+    width: 1200px;
+    margin: 0 auto;
+    background-color: bisque;
+}
+
+.navi {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px;
+    position: relative;
+    text-align: center;
+}
+/*relative 자기자리지켜야하는것들은 포지션 꼭주고 시작할것
+ >> 안그러면 모든것에 absolute 주어야함.*/
+
+
+ .sub-Navi {
+     position: absolute;
+     margin: 20px 0;
+     display: none;
+ }
+
+ .sub-navi>li {
+     margin: 10px 0;
+ }
