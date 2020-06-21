@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        P {
+            color: red;
+            font-size: 2em;
+            animation-name: text;
+            /* animation-duration: 1.3s;
+            position: relative;
+            animation-iteration-count: infinite; */
+        }
+        #text01,#text02,#text03,#text04,#text05{
+            position: relative;
+        }
+
+        /* @keyframes text{
+            /* from{
+                top: 10px;
+            }
+            to{
+                top: 0;
+            }
+        }
+    
+        아래에서 위로 올라가는것. 
+        반복하려면 0%,25%,50%,75%,100% 다 써줘야함 */
+        
+    </style>
+</head>
+<body>
+    <div class="text">
+        <p id="all-text">
+            <span id="text01">O</span>
+            <span id="text02">N</span>
+            <span id="text03">스</span>
+            <span id="text04">토</span>
+            <span id="text05">어</span>
+        </p>
+    </div>
+
+
+    <script src="javascript/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+
+        // setInterval(
+        //     function(){
+        //         alert("Hello");
+        //     }, 3000); 
+            // setInterval 반복적인 수행을 할 때 쓰는것
+
+
+        // setInterval(function(){
+        //     $('#all-text').delay("1000");
+        //     $('#all-text').animate({top: "-10px"},500);
+        //     $('#all-text').delay("1000");
+        //     $('#all-text').animate({top:"0px"},500);
+        // });   
+        
+        setInterval(function(){
+            $('#text01').delay("1000");
+            $('#text01').animate({top: "10px"},500);
+            $('#text01').delay("1000");
+            $('#text01').animate({top: "0px"},500);
+            $('#text02').delay("2000");
+            $('#text02').animate({top: "10px"},500);
+            $('#text02').delay("2000");
+            $('#text02').animate({top: "0px"},500);
+            $('#text03').delay("2000");
+            $('#text03').animate({top: "10px"},500);
+            $('#text03').delay("3000");
+            $('#text03').animate({top: "0px"},500);
+            $('#text04').delay("4000");
+            $('#text04').animate({top: "10px"},500);
+            $('#text04').delay("4000");
+            $('#text04').animate({top: "0px"},500);
+            $('#text05').delay("5000");
+            $('#text05').animate({top: "10px"},500);
+            $('#text05').delay("5000");
+            $('#text05').animate({top: "0px"},500);
+            }
+        );  
+    </script>
+</body>
+</html>
