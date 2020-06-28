@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM(Document Object Model)</title>
+</head>
+<body>
+    <h1 id="title" class="title">여기를 변경해 주세요^^</h1>
+    <script>
+        //문서 객체 선택  (같은방식이나 버전이 다름.)
+        var title = document.getElementById('title');
+        // document.getElementsByClassName('title');
+        // document.getElementsByTagName("h1");
+        // javascript ES5
+        var title2 = document.querySelector("#title");
+        // javascript ES6
+
+        //문서 객체를 조작
+        title2.style.color = 'white';
+        title2.style.background = 'orange';
+        title2.innerHTML = "JavaScript로 문서를 조작";
+    </script>
+</body>
+</html>

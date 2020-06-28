@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM3(Document Object Model)</title>
+    <style>
+        #box{
+            width: 100px;
+            height: 100px;
+            border: 3px solide black;
+            position: relative;
+        }
+        /* #box.hover{
+            background: orange;
+            color:white;
+        } */
+    </style>
+</head>
+<body>
+    <!-- <script>
+        window.onload=function(){
+        var h1=document.querySelector('h1');
+        
+        h1.onclick=function(){
+        this.innerHTML='문서를 로딩했습니다.';
+        }    
+    }
+    </script> -->
+
+
+
+
+
+    <!-- 문서객체.addEventListener("이벤트타입",리스너); -->
+    <div id="box">
+        <p>마우스를 올려주세요</p>
+    </div>
+    <!-- <button id="btn">Click</button> -->
+
+    <script type="text/javascript">
+        var box = document.querySelector('#box');
+
+
+        //touchstart 화면을 건드렸을 때
+        //touchend 화면에서 손을 때었을때
+        //touchmove 화면에서 터치로 이동 중일때
+        //터치 제어를 위한 객체 선언
+        var touch = {
+            start: function (){
+                box.innerHTML = '나를 건드렸군요!';
+                this.style.background = 'red';
+            },
+            end: function(){
+                box.innerHTML = '손을 떼었군요!';
+                this.style.background = '';
+            },
+            move: function (e){
+                box.innerHTML ='만지는 중입니다!';
+                this.style.background = 'yellow';
+                var touchobj = e.changedTouches[0];
+                //현재 손가락 위치
+                var x = parseInt(touchobj.clientX),
+                    y = parseInt(touchobj.clientY),
+                    ex = x - 100;
+                    ey = y - 200;
+                box.innerHTML = '만지는 중입니다.';
+                this.style.background = "yellow";
+
+                this.style.left = ex+'px';
+                this.style.top = ey+"px";
+                console.log(touchobj);
+            }
+        };  //객체끝  >> start,end,move 등 a,b,c로 지칭해도 상관은없음.
+
+
+        //터치 이벤트 리스너 추가
+        box.addEventListener('touchstart', touch.start);
+        box.addEventListener('touchend', touch.end);
+        box.addEventListener('touchmove', touch.move);
+
+
+
+        
+        // var box = document.getElementById('box');
+
+        // //마우스오버
+        // box.addEventListener('mouseover', function(){
+        //     box.setAttribute('class','hover');
+        // });
+
+        // //마우스아웃
+        // box.addEventListener('mouseout',function(){
+        //     box.removeAttribute('class');
+        // });
+
+
+
+
+
+        // var btn= document.querySelector('#btn');
+
+        // btn.addEventListener('click',function(){
+        //     alert('event 1');
+        // });
+        // btn.addEventListener('click,function'(){
+        //     alert('event 2');
+        // });
+    </script>
+    
+
+
+
+
+     <script type="text/javascript">
+    
+         //  onclick 마우스를 클릭했을때
+         // onmouseover 마우스가 해당 내용안에 들어왔을때
+         // mouseout  마우스가 해당 내용안에 벗어났을때
+         // onkeydown 키보드를 입력했을대
+         // onkeyup 키보드를 땠을 때
+         // onfocus.onblur 해당요소가 선택 됬거나 해제 했을때
+         // onsubmit 폼 전송 이벤트가 발생했을때
+         // onload  스크립트를 위에 사용할때 >> 거의 사용안함.
+
+     </script>
+</body>
+</html>
