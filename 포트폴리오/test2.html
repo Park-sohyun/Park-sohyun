@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PALISADE</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+body {
+    animaion: 
+}
+
+#background-change {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 900px;
+    z-index: -1;
+}
+    </style>
+</head>
+<body>
+
+    <div id="background-change"></div>
+
+   <!--jquery 3.2.1-->
+   <script src="js/jquery-3.2.1.min.js"></script>
+
+   <!--main js-->
+   <script type="text/javascript">
+    
+    var images = ["bg-img01.jpg", "bg-img02.jpg", "bg-img03.jpg", "bg-img04.jpg"];
+
+    $(function(){
+        var i = 0;
+        $("#background-change").css("background-image","url(images/" + images[i] + ")");
+        setInterval(function(){
+            i++; if (i == images.length) {
+                i = 0;
+            }
+        $("#background-change").fadeOut("slow",function(){
+            $(this).css("background-image","url(images/" + images[i] +")");
+            $(this).fadeIn("slow");
+        });
+        }, 3000);
+    });
+   </script>
+</body>
+</html>

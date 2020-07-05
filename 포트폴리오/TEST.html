@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>test</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style: none;
+        }
+        a{
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .warp-tab{
+            width: 50%;
+            margin: 0 auto;
+        }
+
+        .warp-list>ul {
+            display: flex;
+        }
+        .warp-list>ul>li{
+            width: 50%;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .warp-list>ul>li:first-child {
+            background-color: yellowgreen;
+        }
+        .warp-list>ul>li:last-child {
+            background-color: skyblue;
+        }
+        .tab-content-02 {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+   <h1>TAB</h1>
+
+   <div class="warp-tab">
+       <div class="warp-list">
+           <ul>
+               <li class="tab-btn01"><a href="#">공지사항</a></li>
+               <li class="tab-btn02"><a href="#">게시판</a></li>
+           </ul>
+       </div>
+       <div class="warp-content">
+           <div class="tab-content-01">
+                <p>2020-07-05 공지사항표시입니다.</p>
+                <p>2020-07-04 해당하는 컨텐츠입니다.</p>
+           </div>
+           <div class="tab-content-02">
+                <p>2020-07-04 게시판입니다.</p>
+                <p>2020-07-03 게시판 리스트입니다.</p>
+           </div>
+       </div>
+   </div>
+
+   <script src="js/jquery-3.2.1.min.js"></script>
+   <script type="text/javascript">
+    $(function){
+        $(".tab-btn01").click(function(){
+            $(".tab-content-01").css("display","block");
+            $(".tab-content-02").css("display","none");
+        });
+        $(".tab-btn02").click(function(){
+            $(".tab-content-02").click("display","block");
+            $(".tab-content-01").click("display","none");
+        });
+    };
+   </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+    <ul>
+        <li>first</li>
+        <li>second</li>
+        <li>third</li>
+        <li>fourth</li>
+    </ul>
+
+    <script type="text/javascript">
+
+        var $li = $('li'),  //엘리먼트 선택
+        length = $li.length,  //엘리먼트 길이
+        size = 12;
+
+        console.time('Javascript');
+        //li 요소의 개수만큼 반복
+        for(var i = 0; i < length; i++ ){
+            $('li').eq(i).css('fontSize', size + 'px');
+            size += 10;
+        }
+        console.timeEnd('Javascript');
+
+    </script>
+</body>
+</html>
