@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>majony</title>
+    <style>
+        .sub_wrap {
+            width: 30%;
+        }
+
+        .sub_wrap>img {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="all_wrap">
+        <div class="sub_wrap">
+            <img src="images/img-01.jpg" alt="">
+        </div>
+        <div class="sub_wrap">
+            <img src="images/img-02.jpg" alt="">
+        </div>
+        <div class="sub_wrap">
+            <img src="images/img-03.jpg" alt="">
+        </div>
+        <div class="sub_wrap">
+            <img src="images/img-04.jpg" alt="">
+        </div>
+        <div class="sub_wrap">
+            <img src="images/img-05.jpg" alt="">
+        </div>
+        <div class="sub_wrap">
+            <img src="images/img-06.jpg" alt="">
+        </div>
+        <div class="sub_wrap">
+            <img src="images/img-07.jpg" alt="">
+        </div>
+        <div class="sub_wrap">
+            <img src="images/img-08.jpg" alt="">
+        </div>
+        <div class="sub_wrap">
+            <img src="images/img-09.jpg" alt="">
+        </div>
+        <div class="sub_wrap">
+            <img src="images/img-10.jpg" alt="">
+        </div>
+        <div class="sub_wrap">
+            <img src="images/img-11.jpg" alt="">
+        </div>
+        <div class="sub_wrap">
+            <img src="images/img-12.jpg" alt="">
+        </div>
+        <div class="sub_wrap">
+            <img src="images/img-13.jpg" alt="">
+        </div>
+        <div class="sub_wrap">
+            <img src="images/img-14.jpg" alt="">
+        </div>
+        <div class="sub_wrap">
+            <img src="images/img-15.jpg" alt="">
+        </div>
+        <div class="sub_wrap">
+            <img src="images/img-16.jpg" alt="">
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script>
+        $(function(){
+            $('.all_wrap').masonry({
+            // options
+            itemSelector: '.grid-item',
+            columnWidth: 200
+});
+        });
+    </script>
+</body>
+</html>

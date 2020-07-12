@@ -1,0 +1,22 @@
+.carbox {
+	border-radius:5px;
+	border:5px solid silver;
+	height:500px;
+	margin:0 auto;
+	overflow:hidden;
+	position:relative; 
+	width:80%;
+}
+
+.carbox .car {
+	background-repeat:no-repeat;
+	background-position:bottom; 
+	bottom:100%;
+	height:150px;
+	position:absolute;
+	width:220px;
+}
+
+.carbox .car.num1 { background-image:url('../images/0096.gif'); }
+.carbox .car.num2 { background-image:url('../images/0097.gif'); }
+.carbox .car.num3 { background-image:url('../images/0098.gif'); }

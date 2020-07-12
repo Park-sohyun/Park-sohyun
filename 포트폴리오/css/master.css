@@ -103,13 +103,41 @@ img {
 }
 
 .section05 {
-    padding: 50px 0;
-    background-color: #f6f3f2;
+    width: 100%;
+}
+
+.modal-img {
+    padding: 5% 0;
 }
 
 .section06 {
-    padding: 50px 0;
+
 }
+
+.tabp>img {
+    width: 80%;
+}
+
+.tabp{
+    padding-top: 5%;
+}
+
+.tab-btn>button {
+    width: 80%;
+    border: none;
+    font-size: 2em;
+}
+
+.btn-content{
+    border: 1px solid #000;
+    width: 80%;
+    margin: 0 auto;
+    height: 150px;
+    display: none;
+    text-align: center;
+    box-sizing: border-box;
+    overflow-y: auto;
+}}
 
 .section07 {
     padding: 50px;

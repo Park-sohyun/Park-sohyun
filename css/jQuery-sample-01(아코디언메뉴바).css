@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+dt,dd {
+    padding: 10px;
+}
+
+dt {
+    background-color: #cfc;
+    margin-bottom: 5px;
+}
+
+dt span {
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    background-color: black;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+dt.on span {
+    background-color: red;
+}
+
+dd{
+    background-color: tan;
+    margin-bottom: 5px;
+    display: none;
+}

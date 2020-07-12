@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/jQuery-sample-01(아코디언메뉴바).css">
+    <title>아코디언메뉴</title>
+</head>
+<body>
+    <dl>
+        <dt><span></span>전화상담은 언제부터 가능한가요??</dt>
+        <dd>나도몰라...</dd>
+        <dt><span></span>내 구매내역은 어디서 확인할까요?</dt>
+        <dd>나도몰라...</dd>
+    </dl>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+    <script>
+        $('dt').on('click',function(){
+            function slideDown(target){
+                slideUp();
+                $(target).addClass('on').next().slideDown();
+            }
+            function slideUp(){
+                $('dt').removeClass('on').next().slideUp();
+            };
+        $(this).hasClass('on') ? slideUp() : slideDown($(this));
+        });
+    </script>
+</body>
+</html>

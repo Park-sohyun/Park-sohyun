@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        
+        h3 {
+            width: 15%;
+            padding: 10px;
+            border: 1px solid #000;
+            background-color:coral;
+            border-radius: 5%;
+        }
+    </style>
+</head>
+<body>
+   <div id="accordion">
+        <h3>영역입니다.</h3>
+        <div>
+            <p>내용입니다.</p>
+        </div>
+        <h3>영역2입니다.</h3>
+        <div>
+            <p>내용2입니다.</p>
+        </div>
+   </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $(function(){
+            $("#accordion").accordion();
+        });
+    </script>
+    
+</body>
+</html>
